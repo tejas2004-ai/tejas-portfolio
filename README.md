@@ -6,9 +6,11 @@ Personal portfolio and technical showcase of **Tejas Narasimha**, a Full-Stack S
 
 ---
 
-## 🚀 Live Demo & Contact
+## 🚀 Live Website & Contact
 
-- **Live Website:** [http://localhost:3005](http://localhost:3005) (Local Dev)
+- **Production URL:** [https://tejasportfolio-dev.vercel.app](https://tejasportfolio-dev.vercel.app)
+- **Alternate URL:** [https://tejasnarasimha-portfolio.vercel.app](https://tejasnarasimha-portfolio.vercel.app)
+- **Local Dev:** `http://localhost:3005`
 - **Email:** [tejasnarasimha2004@gmail.com](mailto:tejasnarasimha2004@gmail.com)
 - **Phone / WhatsApp:** [+91 93453 40095](tel:+919345340095)
 - **GitHub:** [@tejas2004-ai](https://github.com/tejas2004-ai)
