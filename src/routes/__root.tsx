@@ -10,7 +10,6 @@ import {
 import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
-import { reportLovableError } from "../lib/lovable-error-reporting";
 
 function NotFoundComponent() {
   return (
@@ -37,9 +36,6 @@ function NotFoundComponent() {
 function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   console.error(error);
   const router = useRouter();
-  useEffect(() => {
-    reportLovableError(error, { boundary: "tanstack_root_error_component" });
-  }, [error]);
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
@@ -77,11 +73,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Tejas Narasimha — Full-Stack Software Engineer" },
-      { name: "description", content: "Portfolio of Tejas Narasimha — Full-Stack Software Engineer specializing in React, Next.js, TypeScript, NestJS, and PostgreSQL." },
+      { title: "Tejas Narasimha — Freelance Full-Stack Software Engineer" },
+      { name: "description", content: "Portfolio of Tejas Narasimha — Freelance Full-Stack Software Engineer specializing in React, Next.js, TypeScript, NestJS, and PostgreSQL." },
       { name: "author", content: "Tejas Narasimha" },
-      { property: "og:title", content: "Tejas Narasimha — Full-Stack Software Engineer" },
-      { property: "og:description", content: "Full-stack engineer with hands-on experience building live client web apps, e-commerce platforms, REST APIs, and AI prototypes." },
+      { property: "og:title", content: "Tejas Narasimha — Freelance Full-Stack Software Engineer" },
+      { property: "og:description", content: "Freelance full-stack engineer with hands-on experience building live client web apps, e-commerce platforms, REST APIs, and AI prototypes." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@tejas2004_ai" },

@@ -1,6 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import brain from "@/assets/brain-dither.png";
 import isoEmbed from "@/assets/iso-embed.png";
 import isoShip from "@/assets/iso-ship.png";
 import proofHalftone from "@/assets/proof-halftone.jpg";
@@ -8,17 +7,17 @@ import proofHalftone from "@/assets/proof-halftone.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Tejas Narasimha — Full-Stack Software Engineer" },
+      { title: "Tejas Narasimha — Freelance Full-Stack Software Engineer" },
       {
         name: "description",
         content:
-          "Portfolio of Tejas Narasimha, a Full-Stack Software Engineer specializing in React, Next.js, TypeScript, NestJS, PostgreSQL, and AI-native web applications.",
+          "Portfolio of Tejas Narasimha, a Freelance Full-Stack Software Engineer specializing in React, Next.js, TypeScript, NestJS, PostgreSQL, and AI-native web applications.",
       },
-      { property: "og:title", content: "Tejas Narasimha — Full-Stack Software Engineer" },
+      { property: "og:title", content: "Tejas Narasimha — Freelance Full-Stack Software Engineer" },
       {
         property: "og:description",
         content:
-          "Full-stack engineer with hands-on experience building live client web apps, e-commerce platforms, REST APIs, and AI prototypes.",
+          "Freelance full-stack engineer with hands-on experience building live client web apps, e-commerce platforms, REST APIs, and AI prototypes.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -32,7 +31,8 @@ const SOCIAL_LINKS = {
   linkedin: "https://linkedin.com/in/tejas-n-2988a2278",
   email: "tejasnarasimha2004@gmail.com",
   phone: "+91 93453 40095",
-  location: "Tamil Nadu, India",
+  whatsapp: "https://wa.me/919345340095",
+  location: "Hosur, Tamil Nadu, India",
   hitasoftLive: "https://hitasoft-website.vercel.app/",
   hasumaneLive: "https://hasumane.com",
   voiceDemoLive: "https://restaurant-voice-demo.vercel.app/call.html",
@@ -110,8 +110,8 @@ const capabilities = [
   {
     n: "01",
     tag: "frontend",
-    title: ["Interactive Web", "& Motion UIs."],
-    body: "Engineering high-performance web frontends with React, Next.js 15, TypeScript, GSAP, and Tailwind CSS with sub-second load times and 95+ Lighthouse scores.",
+    title: ["Interactive 3D", "& Motion UIs."],
+    body: "Engineering high-performance web frontends with React, Next.js 15, TypeScript, Three.js, GSAP, and Tailwind CSS with sub-second load times and 95+ Lighthouse scores.",
   },
   {
     n: "02",
@@ -136,6 +136,25 @@ const capabilities = [
 const projects = [
   {
     id: "01",
+    title: "HasuMane E-commerce Platform",
+    client: "Client Platform · Digimaxx",
+    tag: "E-commerce · NestJS · PostgreSQL",
+    description:
+      "A complete live dairy commerce storefront and back-office management platform supporting customer subscriptions, order fulfillment, admin inventory tracking, authentication, and metrics reporting.",
+    highlights: [
+      "NestJS type-safe RESTful API architecture",
+      "PostgreSQL schema modeling via Prisma ORM",
+      "Containerized Docker & Dokploy deployment",
+      "Automated subscription & recurring orders",
+    ],
+    tech: ["Next.js", "NestJS", "PostgreSQL", "Prisma ORM", "Docker", "Dokploy"],
+    liveUrl: "https://hasumane.com",
+    githubUrl: "https://github.com/tejas2004-ai",
+    metric: "Full-Stack Dairy Commerce",
+    image: isoEmbed,
+  },
+  {
+    id: "02",
     title: "HitaSoft Corporate Platform",
     client: "Client Project · Digimaxx",
     tag: "Full-Stack · Next.js · GSAP",
@@ -152,25 +171,6 @@ const projects = [
     githubUrl: "https://github.com/tejas2004-ai",
     metric: "95+ Lighthouse Score",
     image: isoShip,
-  },
-  {
-    id: "02",
-    title: "HasuMane E-commerce Platform",
-    client: "Client Platform · Digimaxx",
-    tag: "E-commerce · NestJS · PostgreSQL",
-    description:
-      "A complete live dairy commerce storefront and back-office management platform supporting customer subscriptions, order fulfillment, admin inventory tracking, authentication, and metrics reporting.",
-    highlights: [
-      "NestJS type-safe RESTful API architecture",
-      "PostgreSQL schema modeling via Prisma ORM",
-      "Containerized Docker & Dokploy deployment",
-      "Automated subscription & recurring orders",
-    ],
-    tech: ["Next.js", "NestJS", "PostgreSQL", "Prisma ORM", "Docker", "Dokploy"],
-    liveUrl: "https://hasumane.com",
-    githubUrl: "https://github.com/tejas2004-ai",
-    metric: "100% Automated Orders",
-    image: isoEmbed,
   },
   {
     id: "03",
@@ -194,13 +194,14 @@ const projects = [
 
 const stackCategories = [
   {
-    name: "Frontend & Interfaces",
+    name: "Frontend & 3D Interfaces",
     tag: "frontend",
     skills: [
       { name: "React.js & Next.js 15", desc: "Server components, App Router, SSR, SEO optimization" },
       { name: "TypeScript", desc: "Strict type safety, interfaces, scalable codebases" },
-      { name: "Tailwind CSS & Radix UI", desc: "Modern utility styling, accessible headless components" },
+      { name: "Three.js & WebGL", desc: "Interactive 3D geometry, particle systems, WebGL canvas rendering" },
       { name: "GSAP & Motion", desc: "Timeline animations, scroll-triggered interactive storytelling" },
+      { name: "Tailwind CSS & Radix UI", desc: "Modern utility styling, accessible headless components" },
     ],
   },
   {
@@ -227,10 +228,10 @@ const stackCategories = [
     name: "AI, Tools & Workflow",
     tag: "tooling",
     skills: [
-      { name: "AI Integration & n8n", desc: "Prompt engineering, LLM APIs (Claude/ChatGPT), workflow automation" },
+      { name: "AI Integration & LLMs", desc: "Prompt engineering, LLM APIs (Claude / OpenAI), intelligent workflows" },
       { name: "Git & GitHub", desc: "Version control, branch workflows, pull requests" },
       { name: "Vercel & Cloudflare", desc: "Edge deployments, CDN caching, custom domains" },
-      { name: "VS Code & Postman", desc: "API testing, automated linting, debugging" },
+      { name: "VS Code & Development Tools", desc: "Code quality, automated linting, debugging, test workflows" },
     ],
   },
 ];
@@ -264,11 +265,18 @@ const principles = [
 
 const experiences = [
   {
+    role: "Freelance Full-Stack Developer",
+    company: "Self-Employed / Client Projects",
+    period: "2026 — Present",
+    location: "Remote",
+    desc: "Architecting, developing, and deploying bespoke web platforms, responsive frontend applications, and custom backend APIs for clients and startups. Providing end-to-end full-stack architecture, performance optimization, containerization with Docker/Dokploy, and modern UI engineering.",
+  },
+  {
     role: "Full-Stack Developer Intern",
     company: "Digimaxx (India)",
-    period: "Present",
+    period: "June 2026 (1 month)",
     location: "Remote / Hybrid",
-    desc: "Developing full-stack features for HasuMane (dairy e-commerce platform) using React, Next.js, NestJS, PostgreSQL, and Prisma ORM. Engineered the HitaSoft corporate platform with GSAP motion and responsive UI. Set up Docker, Dokploy, and Vercel deployment workflows.",
+    desc: "Engineered live client platforms for Digimaxx, including HasuMane (dairy e-commerce platform built with React, Next.js, NestJS, PostgreSQL, and Prisma ORM) and HitaSoft (corporate platform with Next.js & GSAP motion). Configured Docker, Dokploy, and Vercel automated CI/CD deployment workflows.",
   },
   {
     role: "Web Development Intern",
@@ -289,19 +297,10 @@ const experiences = [
 function Index() {
   const [copied, setCopied] = useState(false);
   const [filter, setFilter] = useState("all");
-  const [formSubmitted, setFormSubmitted] = useState(false);
-  const [formData, setFormData] = useState({ name: "", email: "", message: "", projectType: "Full-Stack Web App" });
-
   const handleCopyEmail = () => {
     navigator.clipboard.writeText(SOCIAL_LINKS.email);
     setCopied(true);
     setTimeout(() => setCopied(false), 2500);
-  };
-
-  const handleFormSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!formData.name || !formData.email || !formData.message) return;
-    setFormSubmitted(true);
   };
 
   const filteredProjects =
@@ -314,12 +313,14 @@ function Index() {
       {/* Top Header */}
       <header className="sticky top-0 z-50 border-b border-border bg-background/85 backdrop-blur-md">
         <div className="mx-auto flex h-16 max-w-[1300px] items-center justify-between px-6">
-          <a href="/" className="flex items-center gap-2.5 text-lg font-bold tracking-tight">
-            <img src={brain} alt="Tejas Narasimha" width={28} height={28} className="h-7 w-7" />
-            <span>tejas<span className="text-primary">.dev</span></span>
-            <span className="mono-label hidden rounded border border-border bg-muted px-1.5 py-0.5 text-[9px] text-muted-foreground sm:inline-block">
-              FULL-STACK SDE
-            </span>
+          <a href="/" className="flex items-center gap-2.5 text-lg font-bold tracking-tight group">
+            <div className="flex h-8 w-8 items-center justify-center rounded-sm bg-primary text-primary-foreground font-mono font-bold text-xs shadow-md shadow-primary/25 group-hover:scale-105 transition-transform">
+              TN
+            </div>
+            <div className="flex flex-col">
+              <span className="leading-tight text-foreground font-bold">tejas<span className="text-primary">.dev</span></span>
+              <span className="mono-label text-[9px] text-primary font-semibold tracking-wider">FULL-STACK SDE</span>
+            </div>
           </a>
 
           <nav className="absolute left-1/2 hidden -translate-x-1/2 gap-8 text-sm font-medium text-foreground/80 md:flex">
@@ -340,65 +341,43 @@ function Index() {
               <span className={`h-1.5 w-1.5 rounded-full ${copied ? "bg-emerald-500 animate-ping" : "bg-primary"}`} />
               {copied ? "COPIED TO CLIPBOARD" : "COPY EMAIL"}
             </button>
-            <ArrowButton label="Get in Touch" href="#contact" />
+            <ArrowButton label="Hire / Contact" href="#contact" />
           </div>
         </div>
       </header>
 
       {/* Hero Section */}
-      <section className="dot-grid border-b border-border relative overflow-hidden">
-        <div className="mx-auto max-w-[1150px] px-6 py-24 text-center md:py-36">
-          <div className="mx-auto mb-10 inline-flex flex-wrap items-center justify-center gap-3 rounded-full border border-border bg-card py-1.5 pl-2 pr-4 text-sm shadow-sm">
+      <section className="dot-grid border-b border-border relative overflow-hidden min-h-[calc(100vh-4rem)] flex items-center justify-center">
+        <div className="mx-auto max-w-[1150px] px-6 py-8 sm:py-12 md:py-14 text-center w-full">
+          <div className="mx-auto mb-6 inline-flex flex-wrap items-center justify-center gap-2.5 rounded-full border border-border bg-card py-1.5 pl-2 pr-4 text-xs sm:text-sm shadow-sm">
             <span className="flex items-center gap-1.5 rounded-full bg-accent px-2.5 py-1 text-xs font-semibold text-accent-foreground">
               <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
-              Available for Full-Time / SDE Roles
+              Open to Work · Freelance, Contract &amp; Full-Time
             </span>
-            <span className="text-foreground/80 font-medium">Full-Stack &amp; AI Systems Engineer</span>
+            <span className="text-foreground/80 font-medium">Full-Stack Software Engineer</span>
+            <span className="text-muted-foreground text-xs hidden md:inline">· Production Architectures</span>
             <a href="#projects" className="text-primary hover:underline font-mono text-xs">
-              Live Projects →
+              Live Client Work →
             </a>
           </div>
 
-          <h1 className="text-[2.6rem] font-bold leading-[0.94] tracking-[-0.04em] sm:text-[4rem] md:text-[5.75rem] lg:text-[6.5rem]">
-            Full-stack engineer &amp;
-            <span className="mt-1 flex flex-wrap items-center justify-center gap-2 md:gap-4">
-              <img
-                src={brain}
-                alt="AI mark"
-                width={100}
-                height={100}
-                className="h-10 w-10 sm:h-16 sm:w-16 md:h-20 md:w-20"
-              />
-              <span className="text-foreground">builder of </span>
+          <h1 className="text-[2.2rem] font-bold leading-[1.06] tracking-[-0.035em] sm:text-[3.2rem] md:text-[4.2rem] lg:text-[4.8rem]">
+            <span className="block text-foreground">A vision gives direction.</span>
+            <span className="mt-1.5 sm:mt-2.5 block">
+              <span className="text-foreground">Relentless engineering </span>
               <span className="text-primary underline decoration-primary/40 decoration-4 underline-offset-8">
-                production
+                builds the reality.
               </span>
-              <span>web apps.</span>
             </span>
           </h1>
 
-          <p className="mx-auto mt-10 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
-            Hi, I'm <strong className="text-foreground font-semibold">Tejas Narasimha</strong>. Computer Science Engineering student and full-stack developer with hands-on experience delivering live client web applications, e-commerce architectures, REST APIs, and AI prototypes using React, Next.js, TypeScript, NestJS, and PostgreSQL.
+          <p className="mx-auto mt-6 md:mt-8 max-w-2xl text-sm sm:text-base leading-relaxed text-muted-foreground">
+            Hi, I'm <strong className="font-bold text-foreground text-[15px] sm:text-base underline decoration-primary decoration-2 underline-offset-4">Tejas Narasimha</strong> — a <span className="font-semibold text-foreground bg-primary/10 text-primary border border-primary/25 px-2 py-0.5 rounded-xs font-mono text-xs sm:text-sm inline-block my-0.5">Full-Stack Software Engineer</span> open to all opportunities (freelance client projects, contract roles, and full-time positions). Delivering live client web applications, e-commerce architectures, type-safe REST APIs, and modern digital interfaces using React, Next.js, TypeScript, NestJS, and PostgreSQL.
           </p>
 
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+          <div className="mt-6 md:mt-8 flex flex-wrap items-center justify-center gap-3 sm:gap-4">
             <ArrowButton label="View Live Projects" href="#projects" />
             <ArrowButton label="Technical Stack" href="#skills" tone="outline" />
-          </div>
-
-          {/* Quick Metrics Strip */}
-          <div className="mt-16 grid grid-cols-2 gap-4 border-t border-border pt-10 sm:grid-cols-4 max-w-4xl mx-auto">
-            {[
-              ["Live Clients", "HitaSoft & HasuMane"],
-              ["Full-Stack", "React · Next.js · NestJS"],
-              ["PostgreSQL", "Prisma & Relational DBs"],
-              ["Docker", "Containerized Deployments"],
-            ].map(([stat, label]) => (
-              <div key={label} className="p-3 text-center">
-                <div className="text-xl font-bold tracking-tight text-foreground md:text-2xl">{stat}</div>
-                <div className="mono-label mt-1 text-[11px] text-muted-foreground">{label}</div>
-              </div>
-            ))}
           </div>
         </div>
       </section>
@@ -406,26 +385,16 @@ function Index() {
       {/* Chapter 01: What I Do (Dark Ink Section) */}
       <section id="about" className="bg-ink text-ink-foreground relative">
         <div className="mx-auto max-w-[1300px] px-6 py-28">
-          <ChapterBar label="⟩ chapter 01 — engineering profile" index="01 / 05" dark />
+          <ChapterBar label="⟩ chapter 01 — engineering in the ai era" index="01 / 05" dark />
 
-          <div className="flex justify-center">
-            <img
-              src={brain}
-              alt="Tejas dither logo"
-              width={160}
-              height={160}
-              loading="lazy"
-              className="h-36 w-36 sm:h-44 sm:w-44"
-            />
-          </div>
 
           <div className="mt-12 grid gap-10 md:grid-cols-2">
             <h2 className="text-4xl font-bold leading-[1.02] tracking-tight md:text-6xl">
-              Shipping live applications.{" "}
-              <span className="text-primary">From clean databases to responsive UI.</span>
+              Software for the AI era.{" "}
+              <span className="text-primary">From clean databases to intelligent UI.</span>
             </h2>
             <p className="self-end text-base text-ink-foreground/70 leading-relaxed">
-              I have delivered real-world client platforms including <strong className="text-ink-foreground">HasuMane</strong> (dairy e-commerce with NestJS &amp; PostgreSQL) and the <strong className="text-ink-foreground">HitaSoft</strong> corporate platform (Next.js &amp; GSAP). I build with type safety, maintainability, and clean architecture.
+              Engineering unified full-stack web applications: high-speed <strong className="text-ink-foreground">Frontend Interfaces</strong> (React/Next.js) and resilient <strong className="text-ink-foreground">Backend &amp; Relational Databases</strong> (NestJS, PostgreSQL &amp; Prisma ORM).
             </p>
           </div>
 
@@ -437,13 +406,13 @@ function Index() {
                 <div className="mono-label text-primary-foreground/70 mb-2">PROVEN TRACK RECORD</div>
                 <h3 className="text-3xl font-bold tracking-tight">Full-Stack Client Application Delivery</h3>
                 <p className="mt-4 max-w-md text-sm text-primary-foreground/85 leading-relaxed">
-                  Hands-on engineering across live production codebases: writing REST APIs in NestJS, structuring PostgreSQL databases with Prisma ORM, crafting interactive React/Next.js interfaces, and deploying via Docker and Vercel.
+                  Hands-on engineering across live client codebases: writing REST APIs in NestJS, structuring PostgreSQL databases with Prisma ORM, crafting interactive React/Next.js interfaces, and deploying via Docker and Vercel.
                 </p>
                 <div className="mt-10 grid grid-cols-3 border border-primary-foreground/25">
                   {[
-                    ["HasuMane", "E-commerce platform"],
-                    ["HitaSoft", "Corporate platform"],
-                    ["SRM TRP", "B.E. Computer Science"],
+                    ["HasuMane", "Digimaxx E-commerce"],
+                    ["HitaSoft", "Digimaxx Corporate"],
+                    ["Freelance", "Custom Web & APIs"],
                   ].map(([a, b], i) => (
                     <div
                       key={b}
@@ -458,27 +427,27 @@ function Index() {
 
               <div className="mt-10 pt-6 border-t border-primary-foreground/20 flex items-center justify-between">
                 <span className="mono-label text-xs text-primary-foreground/80">
-                  Live Code · End-to-End Ownership
+                  Live Code · End-to-End Client Ownership
                 </span>
-                <ArrowButton label="Contact Me" href="#contact" tone="ink" />
+                <ArrowButton label="Hire Me" href="#contact" tone="ink" />
               </div>
             </div>
 
             {/* Right Card: Technical Specialization */}
             <div className="rounded-sm border border-ink-foreground/15 bg-background p-10 text-foreground flex flex-col justify-between">
               <div>
-                <div className="mono-label text-primary mb-2">CORE CAPABILITIES</div>
+                <div className="mono-label text-primary mb-2">SERVICES &amp; CAPABILITIES</div>
                 <h3 className="text-3xl font-bold tracking-tight">Modern Web Architecture &amp; APIs</h3>
                 <p className="mt-4 max-w-md text-sm text-muted-foreground leading-relaxed">
-                  Focusing on type-safe development, robust data modeling, automated linting, accessible UI components, and containerized deployment workflows.
+                  Available for full-stack freelance development, type-safe APIs, bespoke frontends, relational database modeling, and containerized cloud deployments.
                 </p>
 
                 <dl className="mt-8 divide-y divide-border border-y border-border">
                   {[
-                    ["Frontend Ecosystem", "React 19, Next.js 15, TypeScript, Tailwind, GSAP"],
+                    ["Full-Stack & 3D Web Apps", "React 19, Next.js 15, TypeScript, Three.js, Tailwind, GSAP"],
                     ["Backend & APIs", "NestJS, Node.js, Express.js, FastAPI, REST"],
                     ["Databases & ORM", "PostgreSQL, Prisma ORM, Supabase, Firebase"],
-                    ["Deployment & DevOps", "Docker, Dokploy, Vercel, Git, GitHub Actions"],
+                    ["Deployment & DevOps", "Docker, Dokploy, Vercel, Git, Linux VPS"],
                   ].map(([label, value]) => (
                     <div key={label} className="flex flex-col sm:flex-row sm:items-center sm:justify-between py-3 text-sm gap-1">
                       <dt className="font-semibold text-foreground">{label}</dt>
@@ -489,7 +458,7 @@ function Index() {
               </div>
 
               <div className="mt-8">
-                <ArrowButton label="Explore Projects" href="#projects" />
+                <ArrowButton label="Explore Client Projects" href="#projects" />
               </div>
             </div>
           </div>
@@ -522,7 +491,9 @@ function Index() {
 
             <div className="rounded-sm border border-ink-foreground/15 bg-background p-8 text-foreground">
               <p className="mono-label flex items-center gap-2 text-primary">
-                <img src={brain} alt="" width={18} height={18} loading="lazy" className="h-4 w-4" />
+                <span className="flex h-4 w-4 items-center justify-center rounded-[2px] bg-primary text-primary-foreground font-mono font-bold text-[9px]">
+                  TN
+                </span>
                 Tejas Engineering Standard
               </p>
               <h4 className="mt-4 text-xl font-bold tracking-tight">
@@ -652,15 +623,6 @@ function Index() {
 
                   <div className="mt-8 flex flex-wrap items-center gap-4 pt-4 border-t border-border">
                     <ArrowButton label="Visit Live Website" href={project.liveUrl} target="_blank" tone="primary" />
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="mono-label text-xs text-muted-foreground hover:text-primary transition-colors flex items-center gap-1"
-                    >
-                      <span>GITHUB REPO</span>
-                      <span>↗</span>
-                    </a>
                   </div>
                 </div>
               </div>
@@ -791,191 +753,153 @@ function Index() {
             </div>
           ))}
         </div>
+
+        {/* Engineering Lifecycle Pipeline Strip matching reference */}
+        <div className="mt-20 overflow-x-auto py-6 scrollbar-none">
+          <div className="flex min-w-[760px] items-center justify-between gap-6 px-2">
+            {[
+              "ARCHITECTURE",
+              "DATA-DRIVEN",
+              "AUTOMATION",
+              "CI/CD",
+              "OBSERVABILITY",
+              "SCALE",
+            ].map((step, idx, arr) => (
+              <div key={step} className="flex flex-1 items-center gap-6 last:flex-none">
+                <span className="font-mono text-xs sm:text-[13px] tracking-[0.18em] text-foreground/90 font-medium uppercase shrink-0">
+                  {step}
+                </span>
+                {idx < arr.length - 1 && (
+                  <div className="h-px flex-1 bg-primary/70" />
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
 
       {/* Interactive Contact & Inquiry Section */}
       <section id="contact" className="dot-grid border-t border-border bg-card/40">
         <div className="mx-auto max-w-[1200px] px-6 py-28">
           <div className="text-center max-w-2xl mx-auto">
-            <span className="mono-label text-primary">GET IN TOUCH</span>
+            <span className="mono-label text-primary">LET'S WORK TOGETHER</span>
             <h2 className="mt-4 text-4xl font-bold leading-[0.95] tracking-[-0.04em] md:text-6xl text-foreground">
-              Let's connect &amp; build.{" "}
-              <span className="text-primary">Reach out today.</span>
+              Have a project in mind?{" "}
+              <span className="text-primary">Let's build it.</span>
             </h2>
             <p className="mt-6 text-muted-foreground text-sm sm:text-base leading-relaxed">
-              Open for full-time Software Development Engineer (SDE) roles, full-stack client development, and technical collaborations.
+              Available for freelance client projects, contract full-stack web development, frontend/backend engineering, and technical consulting.
             </p>
           </div>
 
-          <div className="mt-16 grid gap-10 lg:grid-cols-12">
-            {/* Left Contact Card */}
-            <div className="lg:col-span-5 space-y-6">
-              <div className="rounded-sm border border-border bg-background p-8">
-                <div className="mono-label text-xs text-muted-foreground">DIRECT CONTACT</div>
-                
-                {/* Email */}
-                <div className="mt-4 flex items-center justify-between">
-                  <div>
-                    <div className="text-xs text-muted-foreground uppercase font-mono">Email</div>
-                    <a href={`mailto:${SOCIAL_LINKS.email}`} className="text-sm text-primary font-mono hover:underline">
-                      {SOCIAL_LINKS.email}
-                    </a>
-                  </div>
-                  <button
-                    onClick={handleCopyEmail}
-                    className="mono-label rounded border border-border bg-card px-3 py-1.5 text-[11px] text-foreground hover:bg-accent cursor-pointer"
-                  >
-                    {copied ? "COPIED" : "COPY"}
-                  </button>
+          <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {/* Card 1: Email */}
+            <div className="rounded-sm border border-border bg-background p-8 flex flex-col justify-between hover:border-primary/60 transition-colors">
+              <div>
+                <div className="mono-label text-xs text-muted-foreground">DIRECT EMAIL</div>
+                <h3 className="mt-3 text-xl font-bold text-foreground">Email Inbox</h3>
+                <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
+                  Send your project requirements, contract details, or job inquiries directly.
+                </p>
+                <div className="mt-6 p-3 rounded-sm bg-muted/60 border border-border font-mono text-xs text-foreground break-all select-all">
+                  {SOCIAL_LINKS.email}
                 </div>
+              </div>
+              <div className="mt-6 flex items-center gap-3 pt-6 border-t border-border">
+                <a
+                  href={`mailto:${SOCIAL_LINKS.email}`}
+                  className="flex-1 inline-flex h-9 items-center justify-center rounded-sm bg-primary text-primary-foreground text-xs font-medium hover:opacity-90 transition-opacity"
+                >
+                  Send Email ↗
+                </a>
+                <button
+                  onClick={handleCopyEmail}
+                  className="inline-flex h-9 items-center justify-center px-4 rounded-sm border border-border bg-card text-xs font-medium text-foreground hover:bg-accent cursor-pointer transition-colors"
+                >
+                  {copied ? "Copied!" : "Copy"}
+                </button>
+              </div>
+            </div>
 
-                {/* Phone */}
-                <div className="mt-6 pt-6 border-t border-border">
-                  <div className="text-xs text-muted-foreground uppercase font-mono">Phone</div>
-                  <a href="tel:+919345340095" className="text-sm font-semibold text-foreground hover:text-primary">
-                    {SOCIAL_LINKS.phone}
+            {/* Card 2: Phone & WhatsApp */}
+            <div className="rounded-sm border border-border bg-background p-8 flex flex-col justify-between hover:border-primary/60 transition-colors">
+              <div>
+                <div className="mono-label text-xs text-muted-foreground">CALL &amp; CHAT</div>
+                <h3 className="mt-3 text-xl font-bold text-foreground">Phone &amp; WhatsApp</h3>
+                <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
+                  Direct voice call or instant messaging for rapid project discussions.
+                </p>
+                <div className="mt-6 p-3 rounded-sm bg-muted/60 border border-border font-mono text-xs text-foreground">
+                  {SOCIAL_LINKS.phone}
+                </div>
+              </div>
+              <div className="mt-6 flex items-center gap-3 pt-6 border-t border-border">
+                <a
+                  href={SOCIAL_LINKS.whatsapp}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 inline-flex h-9 items-center justify-center rounded-sm bg-emerald-600 text-white text-xs font-medium hover:bg-emerald-500 transition-colors"
+                >
+                  WhatsApp ↗
+                </a>
+                <a
+                  href={`tel:${SOCIAL_LINKS.phone}`}
+                  className="inline-flex h-9 items-center justify-center px-4 rounded-sm border border-border bg-card text-xs font-medium text-foreground hover:bg-accent transition-colors"
+                >
+                  Call
+                </a>
+              </div>
+            </div>
+
+            {/* Card 3: Social & Repositories */}
+            <div className="rounded-sm border border-border bg-background p-8 flex flex-col justify-between hover:border-primary/60 transition-colors md:col-span-2 lg:col-span-1">
+              <div>
+                <div className="mono-label text-xs text-muted-foreground">PROFILES &amp; CODE</div>
+                <h3 className="mt-3 text-xl font-bold text-foreground">GitHub &amp; LinkedIn</h3>
+                <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
+                  Explore live code repositories, contributions, and professional background.
+                </p>
+                <div className="mt-6 space-y-2">
+                  <a
+                    href={SOCIAL_LINKS.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-between p-2.5 rounded-sm bg-muted/60 border border-border text-xs text-foreground hover:text-primary hover:border-primary transition-colors font-mono"
+                  >
+                    <span>GitHub: tejas2004-ai</span>
+                    <span>↗</span>
+                  </a>
+                  <a
+                    href={SOCIAL_LINKS.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-between p-2.5 rounded-sm bg-muted/60 border border-border text-xs text-foreground hover:text-primary hover:border-primary transition-colors font-mono"
+                  >
+                    <span>LinkedIn: tejas-n-2988a2278</span>
+                    <span>↗</span>
                   </a>
                 </div>
-
-                {/* Location */}
-                <div className="mt-6 pt-6 border-t border-border">
-                  <div className="text-xs text-muted-foreground uppercase font-mono">Location &amp; Education</div>
-                  <div className="text-sm text-foreground font-medium mt-0.5">Tamil Nadu, India</div>
-                  <div className="text-xs text-muted-foreground mt-0.5">SRM TRP Engineering College (2023–2027)</div>
-                </div>
-
-                {/* Social Profiles */}
-                <div className="mt-6 pt-6 border-t border-border">
-                  <div className="text-xs text-muted-foreground uppercase font-mono">Social &amp; Code Repositories</div>
-                  <div className="mt-3 flex flex-wrap gap-2">
-                    {[
-                      { name: "GitHub", href: SOCIAL_LINKS.github },
-                      { name: "LinkedIn", href: SOCIAL_LINKS.linkedin },
-                    ].map((s) => (
-                      <a
-                        key={s.name}
-                        href={s.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="mono-label rounded-sm border border-border bg-card px-3 py-1.5 text-xs text-foreground/80 hover:border-primary hover:text-primary transition-colors"
-                      >
-                        {s.name} ↗
-                      </a>
-                    ))}
-                  </div>
-                </div>
               </div>
-
-              {/* Status Box */}
-              <div className="rounded-sm bg-ink text-ink-foreground p-8">
-                <div className="flex items-center gap-2">
-                  <span className="h-2 w-2 rounded-full bg-emerald-400 animate-ping" />
-                  <span className="mono-label text-xs text-ink-foreground/80">STATUS: OPEN FOR NEW OPPORTUNITIES</span>
-                </div>
-                <p className="mt-4 text-xs text-ink-foreground/70 leading-relaxed">
-                  Actively interviewing for full-time SDE roles, full-stack engineering internships, and high-impact web development projects.
-                </p>
+              <div className="mt-6 pt-6 border-t border-border">
+                <span className="mono-label text-[11px] text-muted-foreground block">
+                  Location: Hosur, Tamil Nadu (Remote &amp; Relocation Open)
+                </span>
               </div>
             </div>
+          </div>
 
-            {/* Right Contact Form */}
-            <div className="lg:col-span-7">
-              <div className="rounded-sm border border-border bg-background p-8 md:p-10">
-                {formSubmitted ? (
-                  <div className="py-12 text-center">
-                    <div className="mx-auto grid h-12 w-12 place-items-center rounded-full bg-primary/10 text-primary mb-4 text-xl font-bold">
-                      ✓
-                    </div>
-                    <h3 className="text-2xl font-bold text-foreground">Message Dispatched!</h3>
-                    <p className="mt-2 text-sm text-muted-foreground max-w-md mx-auto">
-                      Thank you for reaching out, <strong className="text-foreground">{formData.name}</strong>. I've received your note and will reply directly to <strong className="text-foreground">{formData.email}</strong> promptly.
-                    </p>
-                    <button
-                      onClick={() => {
-                        setFormSubmitted(false);
-                        setFormData({ name: "", email: "", message: "", projectType: "Full-Stack Web App" });
-                      }}
-                      className="mt-6 mono-label text-xs text-primary underline cursor-pointer"
-                    >
-                      SEND ANOTHER MESSAGE
-                    </button>
-                  </div>
-                ) : (
-                  <form onSubmit={handleFormSubmit} className="space-y-6">
-                    <div className="mono-label text-xs text-primary">SEND A DIRECT MESSAGE</div>
-
-                    <div className="grid gap-6 sm:grid-cols-2">
-                      <div>
-                        <label className="mono-label text-[11px] text-muted-foreground block mb-2">
-                          YOUR NAME *
-                        </label>
-                        <input
-                          type="text"
-                          required
-                          value={formData.name}
-                          onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                          placeholder="e.g. Hiring Manager / Client"
-                          className="w-full rounded-sm border border-border bg-card px-4 py-2.5 text-sm text-foreground focus:border-primary focus:outline-none"
-                        />
-                      </div>
-
-                      <div>
-                        <label className="mono-label text-[11px] text-muted-foreground block mb-2">
-                          EMAIL ADDRESS *
-                        </label>
-                        <input
-                          type="email"
-                          required
-                          value={formData.email}
-                          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                          placeholder="you@company.com"
-                          className="w-full rounded-sm border border-border bg-card px-4 py-2.5 text-sm text-foreground focus:border-primary focus:outline-none"
-                        />
-                      </div>
-                    </div>
-
-                    <div>
-                      <label className="mono-label text-[11px] text-muted-foreground block mb-2">
-                        INQUIRY TYPE
-                      </label>
-                      <select
-                        value={formData.projectType}
-                        onChange={(e) => setFormData({ ...formData, projectType: e.target.value })}
-                        className="w-full rounded-sm border border-border bg-card px-4 py-2.5 text-sm text-foreground focus:border-primary focus:outline-none"
-                      >
-                        <option>Full-Time SDE Opportunity</option>
-                        <option>Full-Stack Web Development</option>
-                        <option>Frontend &amp; Next.js Engineering</option>
-                        <option>Backend &amp; NestJS / PostgreSQL</option>
-                        <option>General Connect / Mentorship</option>
-                      </select>
-                    </div>
-
-                    <div>
-                      <label className="mono-label text-[11px] text-muted-foreground block mb-2">
-                        MESSAGE *
-                      </label>
-                      <textarea
-                        required
-                        rows={4}
-                        value={formData.message}
-                        onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                        placeholder="Hi Tejas, I saw your work on HitaSoft and HasuMane and would like to discuss..."
-                        className="w-full rounded-sm border border-border bg-card px-4 py-2.5 text-sm text-foreground focus:border-primary focus:outline-none"
-                      />
-                    </div>
-
-                    <button
-                      type="submit"
-                      className="w-full inline-flex h-11 items-stretch rounded-sm bg-primary text-primary-foreground font-medium text-sm transition-opacity hover:opacity-90 cursor-pointer"
-                    >
-                      <span className="grid place-items-center flex-1">Send Message to Tejas Narasimha</span>
-                      <span className="grid place-items-center border-l border-primary-foreground/25 px-4">→</span>
-                    </button>
-                  </form>
-                )}
+          {/* Status Banner */}
+          <div className="mt-10 rounded-sm bg-ink text-ink-foreground p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+            <div>
+              <div className="flex items-center gap-2">
+                <span className="h-2 w-2 rounded-full bg-emerald-400 animate-ping" />
+                <span className="mono-label text-xs text-ink-foreground/80">STATUS: OPEN TO WORK (FREELANCE, CONTRACT &amp; FULL-TIME)</span>
               </div>
+              <p className="mt-2 text-xs text-ink-foreground/70 leading-relaxed max-w-xl">
+                Open for all types of opportunities: freelance client projects, contract roles, full-time engineering positions, custom API/backend builds, and high-performance frontend interfaces.
+              </p>
             </div>
+            <ArrowButton label="Email Tejas Directly" href={`mailto:${SOCIAL_LINKS.email}`} tone="primary" />
           </div>
         </div>
       </section>
@@ -986,11 +910,13 @@ function Index() {
           <div className="grid gap-12 md:grid-cols-4">
             <div className="md:col-span-2">
               <div className="flex items-center gap-2.5 text-lg font-bold tracking-tight">
-                <img src={brain} alt="Tejas Narasimha" width={28} height={28} loading="lazy" className="h-7 w-7" />
+                <div className="flex h-7 w-7 items-center justify-center rounded-sm bg-primary text-primary-foreground font-mono font-bold text-xs">
+                  TN
+                </div>
                 <span>tejas<span className="text-primary">.dev</span></span>
               </div>
               <p className="mt-4 max-w-sm text-sm text-muted-foreground leading-relaxed">
-                Tejas Narasimha — Full-Stack Software Engineer. Building responsive web platforms, backend APIs, and modern digital experiences with React, Next.js, TypeScript, NestJS, and PostgreSQL.
+                Tejas Narasimha — Freelance Full-Stack Software Engineer. Delivering client web platforms, type-safe backend APIs, and modern digital experiences with React, Next.js, TypeScript, NestJS, and PostgreSQL.
               </p>
             </div>
 
@@ -1027,7 +953,12 @@ function Index() {
                 </li>
                 <li>
                   <a href="tel:+919345340095" className="transition-colors hover:text-primary">
-                    {SOCIAL_LINKS.phone}
+                    Phone: {SOCIAL_LINKS.phone}
+                  </a>
+                </li>
+                <li>
+                  <a href={SOCIAL_LINKS.whatsapp} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-primary">
+                    WhatsApp: {SOCIAL_LINKS.phone}
                   </a>
                 </li>
               </ul>
@@ -1037,7 +968,7 @@ function Index() {
           <div className="mt-14 flex flex-col gap-4 border-t border-border pt-6 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
             <span>© {new Date().getFullYear()} Tejas Narasimha. All rights reserved.</span>
             <div className="flex gap-6 font-mono text-[11px]">
-              <span className="text-foreground/70">SRM TRP ENGINEERING COLLEGE</span>
+              <span className="text-foreground/70">FREELANCE FULL-STACK DEVELOPER</span>
               <span>BUILT WITH TANSTACK &amp; TAILWIND</span>
             </div>
           </div>
